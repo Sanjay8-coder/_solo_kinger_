@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <link rel="stylesheet" href="reg.css">
+       
+</head>
+<body>
+    <div class="calculator">
+        <h2> Calculator</h2>
+        <form id="calc-form">
+            <input type="number" id="number1" placeholder="number1" required min="1">
+            <select id="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="number" id="number2" placeholder="number2" required min="1">
+            <input type="submit" value="Calculate">
+        </form>
+        <div id="result">
+        </div>
+    </div>
+    <script>
+        document.getElementById('calc-form').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    var number1 = parseInt(document.getElementById('number1').value);
+    var number2 = parseInt(document.getElementById('number2').value);
+    var operation = document.getElementById('operation').value;
+    var result;
+    
+    switch (operation) {
+        case '+': result = number1 + number2; break;
+        case '-': result = number1 - number2; break;
+        case '*': result = number1 * number2; break;
+        case '/': result = number1 / number2; break;
+        case '%': result = number1 % number2; break;
+    }
+    document.getElementById('result').innerText = 'Result: ' + result;
+});
+
+    </script>
+</body>
+</html>

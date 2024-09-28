@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover</title>
+    
+</head>
+<body> 
+    <script>
+        var a=document.createElement('p')
+        a.textContent="FRIENDSFOREVER"
+        document.body.append(a)
+        a.addEventListener("mouseover",function(){
+            a.style.color="black"
+        })
+        a.addEventListener('mouseleave',function(){
+            a.style.color="red"
+        })
+        a.addEventListener('mouseover',function(){
+            a.style.color="blue"
+        })
+    </script>
+</body>
+</html>

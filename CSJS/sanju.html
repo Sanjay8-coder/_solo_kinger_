@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONVALUE</title>
+    <script>
+        {
+            var data = [
+  {
+    "ID": 11,
+    "NAME": "APPLE",
+    "QUANTITY":"2kg",
+    "RATE": "120",
+   
+  },
+  {
+    "ID": 22,
+    "name": "WATERMELON",
+    "QUANTITY":"2kg",
+    "RATE": "162",
+    
+  },
+  {
+    "ID": 33,
+    "name": "STABERRY",
+    "QUANTITY":"3kg",
+    "RATE": "180",
+    
+  },
+];
+
+var a = [];
+
+document.write("<table border=5><tr>");
+for (u in data[0]) {
+	document.write('<td>' + u + '</td>');
+}
+document.write("</tr>");
+for (var i = 0; i < data.length; i++) {
+	document.write('<tr>');
+	for (y in data[i]) {
+  	document.write('<td>' + data[i][y] + '</td>');
+  }
+	document.write('</tr>');
+}
+document.write("</table>");
+        }
+    </script>
+</head>
+</html>

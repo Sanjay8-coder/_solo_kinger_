@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON</title>
+</head>
+<body>
+    <h2>JSON</h2>
+    <table id="jsonTable" border="10"></table>
+    <script>
+        const jsonData = [
+            { "id": "01", "name": "udhai", "age":18 },
+            { "id": "21", "namw": "sanjay", "Age": 18 },
+            { "id": "12", "name": "yuva", "Age": 18 }
+        ];
+        function createTableFromJSON(jsonData) {
+            const table = document.getElementById("jsonTable");
+            const header = table.createTHead();
+            const headerRow = header.insertRow();
+            Object.keys(jsonData[0]).forEach((key, index) => {
+                const cell = headerRow.insertCell(index);
+                cell.innerHTML = `<b>${key}</b>`;
+            });
+            jsonData.forEach((row, rowIndex) => {
+                const tableRow = table.insertRow(rowIndex + 1);
+                Object.values(row).forEach((value, cellIndex) => {
+                    const cell = tableRow.insertCell(cellIndex);
+                    cell.innerHTML = value;
+                });
+            });
+        }
+        createTableFromJSON(jsonData);
+    </script>
+</body>
+</html>

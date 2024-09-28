@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="number"], select {
+    padding: 10px;
+    font-size: 1rem;
+    border: auto;
+    outline: auto;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #171de3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
